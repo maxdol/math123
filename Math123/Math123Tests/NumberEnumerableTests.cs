@@ -18,9 +18,9 @@ namespace Math123Tests
         }
 
         [Test]
-        public void TestMakeNumer()
+        public void TestMakeNumbers()
         {
-            var numbers = N.MakeNumber(new[] { N.Digits, N.Digits, N.Digits }).ToList();
+            var numbers = N.MakeNumbers(new[] { N.Digits, N.Digits, N.Digits }).ToList();
 
             Assert.AreEqual(1000, numbers.Count());
             for (int i = 0; i != 1000; ++i)

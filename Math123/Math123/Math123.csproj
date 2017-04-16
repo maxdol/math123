@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Algorithms.cs" />
     <Compile Include="NumberEnumerable.cs" />
+    <Compile Include="NumberExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rational.cs" />
   </ItemGroup>
