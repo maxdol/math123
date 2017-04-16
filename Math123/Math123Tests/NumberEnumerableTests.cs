@@ -28,5 +28,17 @@ namespace Math123Tests
                 Assert.AreEqual(i, numbers[i]);
             }
         }
+
+        [Test]
+        public void TestMakeNumbersWithRestrictions()
+        {
+            var numbers = N.MakeNumbers(new[] { N.NonZeroDigits, N.Digits, N.Digits, N.D2, N.D3 }).ToList();
+
+            Assert.AreEqual(900, numbers.Count());
+            for (int i = 100; i != 1000; ++i)
+            {
+                Assert.AreEqual(i * 100 + 23, numbers[i-100]);
+            }
+        }
     }
 }
