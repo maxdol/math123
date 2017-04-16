@@ -12,7 +12,9 @@ namespace Math123Tests
         public void TestContructor()
         {
             var r0 = new Rational();
-            Assert.IsNotNull(r0);
+            Assert.AreEqual(0, r0.Numerator);
+            Assert.AreEqual(0, r0.Denominator);
+            Assert.AreEqual(Rational.Empty, r0);
 
             var f1 = new Rational(2, 4);
             Assert.AreEqual(1, f1.Numerator);

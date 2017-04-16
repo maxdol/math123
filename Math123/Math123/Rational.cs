@@ -1,23 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Globalization;
-
 
 
 namespace Math123
 {
-    // thanks to Rob Blackbourn http://geekswithblogs.net/blackrob/archive/2014/11/14/a-rational-number-class-in-c.aspx
+    //Thanks to Rob Blackbourn http://geekswithblogs.net/blackrob/archive/2014/11/14/a-rational-number-class-in-c.aspx
     //Overview
     //The following code implements a rational number.
 
     //For the underlying types I have decided to use longs throughout as the main problem with rational numbers is overflow.
     // Furthermore I have chosen to always reduce the fraction. This adds an overhead on each computation, but contains overflow problems.
 
-    //Algorithms
-
-    //The first task is to write the greatest common divisor function.
-    // From my previous post I have established the Euclid modulus function to be the fastest.
     public struct Rational : IEquatable<Rational>, IFormattable
     {
         //The Main Class
@@ -70,10 +64,7 @@ namespace Math123
         public long Numerator { get; private set; }
         public long Denominator { get; private set; }
 
-        public bool IsValid
-        {
-            get { return Denominator != 0; }
-        }
+        public bool IsValid => Denominator != 0;
 
         public static Rational Empty { get; private set; }
         public static Rational Zero { get; private set; }
@@ -708,8 +699,4 @@ namespace Math123
         #endregion
     }
 }
-
-//The tests
-
-    //The following code tests the implementation.
 
