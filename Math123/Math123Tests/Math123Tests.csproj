@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="NumberEnumerableTests.cs" />
     <Compile Include="NumberExtensionsTest.cs" />
+    <Compile Include="PrimeNumbersTest.cs" />
     <Compile Include="RationalTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

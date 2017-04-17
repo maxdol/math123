@@ -53,7 +53,7 @@ namespace Math123
             }
             else
             {
-                var gcd = Algorithms.Gcd(numerator, denominator);
+                var gcd = Algorithms.GreatestCommonDivisor(numerator, denominator);
                 numerator /= gcd;
                 denominator /= gcd;
                 Numerator = denominator < 0 ? -numerator : numerator;
